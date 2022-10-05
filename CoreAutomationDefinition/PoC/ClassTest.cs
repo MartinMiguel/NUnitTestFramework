@@ -13,7 +13,7 @@ namespace CoreAutomationDefinition.PoC
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--headless");
-            options.AddArgument("--remote-debugging-port=9222");
+            options.AddArgument("--disable-gpu");
             Console.WriteLine("Setup");
             Driver = new ChromeDriver(options);
             Driver.Manage().Window.Maximize();
