@@ -11,9 +11,12 @@ namespace CoreAutomationDefinition.PoC
         [SetUp]
         public void Initialize()
         {
-            Driver = new ChromeDriver();
-            Driver.Manage().Window.Maximize();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless");
+            options.AddArgument("--remote-debugging-port=9222");
             Console.WriteLine("Setup");
+            Driver = new ChromeDriver(options);
+            Driver.Manage().Window.Maximize();
         }
 
         //[Test]
