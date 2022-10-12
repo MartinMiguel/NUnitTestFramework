@@ -45,7 +45,7 @@ namespace CoreAutomationDefinition.PoC
             homePO.ClickLogin();
             loginPO.EnterUserNameAndPassword("admin", "password");
             loginPO.ClickLogin();
-            Assert.That(homePO.IsLogOffExist(), Is.True, "Log off button did not displayed");
+            Assert.That(homePO.IsLogOffExist(), Is.True, "Log off button did not displayed..");
         }
 
         [TearDown]
